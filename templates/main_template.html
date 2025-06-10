@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en-US it">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="TORCH system">
+        <title>TORCH - Main Template</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='pictures/main/torch_icon.ico')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='main_style.css', version='1.0')}}">
+        <script src="{{url_for('static', filename='main_scripts.js', version='1.0')}}"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <!-- Operations in progress -->
+        <div id="div-operations-in-progress">
+            <div id="div-operations-in-progress-contents">
+                <img src="{{url_for('static', filename='pictures/main/operations_in_progress.png')}}">
+            </div>
+        </div>
+
+        <!-- Quick alert div -->
+        <div id="div-quick-alert"></div>
+
+        <!-- Alert -->
+        <div id="div-alert">
+            <div class="div-block" id="div-alert-contents">
+                <!-- Top Bar -->
+                <div class="div-flex div-topbar">
+                    <h2 class="main-text-red" id="alert-title"></h2>
+                    <img id="alert-close" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
+                </div>
+                <!-- Text -->
+                <div class="div-block">
+                    <p class="main-text-white" id="alert-text"></p>
+                </div>
+                <!-- Input and Button -->
+                <div class="div-flex div-bottombar">
+                    <input class="main-input" id="alert-input">
+                    <button class="main-button-yellow" id="alert-ok-button">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- [= Header =] -->
+        <div class="div-flex">
+            <!-- Logo -->
+            <div class="div-inline">
+                <a class="main-a" href="/"><img alt="logo" src="{{url_for('static', filename='pictures/main/torch_logo_simple.png')}}"></a>
+            </div>
+
+            <!-- Languages buttons and login / logout buttons -->
+            <div class="div-inline">
+                <!-- Languages buttons -->
+                <div class="div-block">
+                    <img id="it_language_button" alt="Italian Flag" src="{{url_for('static', filename='pictures/main/it_flag.png')}}">
+                    <img id="en_language_button" alt="Great Britain Flag" src="{{url_for('static', filename='pictures/main/en_flag.png')}}">
+                </div>
+                <!-- Login / Logout buttons -->
+                <div class="div-block">
+                    {% if "logged" not in session %}
+                        <button class="main-button-green" id="login-button">{{language[session['language']]['main']['login']}}</button>
+                    {% else %}
+                        <button class="main-button-green" id="logout-button">{{language[session['language']]['main']['logout']}}</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- [= Center =] -->
+        <div class="div-block">
+            
+        </div>
+    </body>
+
+</html>
