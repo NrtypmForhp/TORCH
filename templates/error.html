@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="TORCH system">
-        <title>TORCH - Main Template</title>
+        <title>TORCH - Error</title>
         <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='pictures/main/torch_icon.ico')}}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
@@ -72,7 +72,8 @@
 
         <!-- [= Center =] -->
         <div class="div-block">
-            
+            <h1 class="main-text-green">{{language[session['language']]['main']['error']}}</h1>
+            <p class="main-text-white">{{language[session['language']]['main']['error-page-p']}}</p>
         </div>
     </body>
 </html>
