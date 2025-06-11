@@ -104,6 +104,13 @@ html{
     font-weight: 500;
     font-style: normal;
 }
+.main-text-green{
+    color: var(--green-text-color);
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 .main-text-red{
     color: var(--red-color);
     font-family: "Kode Mono", monospace;
@@ -220,7 +227,6 @@ html{
 }
 .div-inline{
     display: inline-block;
-    vertical-align: top;
     margin-right: 15px;
 }
 .div-right{
