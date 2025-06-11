@@ -2,3 +2,5 @@ login: Login
 logout: Logout
 username: Nome Utente
 password: Password
+error: Errore
+error-page-p: Sei su questa pagina perchè qualcosa è andato storto, clicca sul logo per ritornare alla pagina iniziale!

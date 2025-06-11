@@ -2,3 +2,5 @@ login: Login
 logout: Logout
 username: Username
 password: Password
+error: Error
+error-page-p: You're in this page because something goes wrong, click on the logo to return to the home page!
