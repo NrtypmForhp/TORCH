@@ -1,0 +1,4 @@
+not-logged-message-head: Benvenuto in TORCH, un semplice gestionale per magazzino.
+not-logged-message-bottom: Effettua il login per iniziare ad usarlo!
+goods-box-title: ARTICOLI
+goods-box-description: Gestisci gli articoli nel tuo magazzino

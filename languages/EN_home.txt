@@ -1,0 +1,4 @@
+not-logged-message-head: Welcome to TORCH, a simple warehouse management system.
+not-logged-message-bottom: Login to start use it!
+goods-box-title: GOODS
+goods-box-description: Manage the goods in your warehouse
