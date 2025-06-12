@@ -84,7 +84,22 @@
 
         <!-- [= Center =] -->
         <div class="div-block">
-            
+            {% if "logged" not in session %}
+                <!-- Not logged message -->
+                <div class="div-block">
+                    <p class="main-text-white">{{language[session['language']]['home']['not-logged-message-head']}}</p>
+                    <p class="main-text-white">{{language[session['language']]['home']['not-logged-message-bottom']}}</p>
+                </div>
+            {% else %}
+                <!-- Logged in -->
+
+                <!-- Goods -->
+                <div class="center-box">
+                    <img alt="Goods" src="{{url_for('static', filename='pictures/home/goods.png')}}">
+                    <h3 class="main-text-green">{{language[session['language']]['home']['goods-box-title']}}</h3>
+                    <p class="main-text-green">{{language[session['language']]['home']['goods-box-description']}}</p>
+                </div>
+            {% endif %}
         </div>
     </body>
 </html>
