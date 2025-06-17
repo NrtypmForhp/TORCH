@@ -7,6 +7,8 @@ It's a simple warehouse management software made in python, javascript and HTML.
 Multilanguage (for now only Italian and English), can be easily translated trought .txt files in languages directory.
 You can run a simple Flask test server directly with python or deploy it in a server (like Apache).
 
+You need a running mongodb local database to use it!
+
 # WARNING
 
 As the project meant to be a "free time project", I do not give any type of fast assistance!
