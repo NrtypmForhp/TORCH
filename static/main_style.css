@@ -119,7 +119,9 @@ html{
     font-style: normal;
 }
 .main-a{
+    display: block;
     text-decoration: none;
+    padding: 0;
 }
 
 /* [= Button classes =] */
