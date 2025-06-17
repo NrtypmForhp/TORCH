@@ -101,6 +101,7 @@ def login():
     session["name"] = user["name"]
     session["surname"] = user["surname"]
     session["language"] = user["language"]
+    session["access"] = user["access"]
     
     return jsonify({"response": "ok"})
 
@@ -120,8 +121,21 @@ def logout():
     session.pop("username")
     session.pop("name")
     session.pop("surname")
+    session.pop("access")
     
     return jsonify({"response": "ok"})
+
+# [= Goods =]
+@app.route("/goods", methods = ["GET"])
+def goods():
+    # Check if user isn't logged
+    if "logged" not in session or "goods" not in session["access"]:
+        # If isn't an Ajax request type
+        if request.headers.get("Content-type") != "application/json": return render_template("error.html")
+        # If is an Ajax request type
+        else: return jsonify({"response": "error"})
+    
+    return render_template("goods.html")
 
 # [= Main pages =]
 
@@ -150,6 +164,19 @@ def getlanguage():
 @app.context_processor
 def langcontextpage(): # Pass language dict to jinja2
     return dict(language = language)
+
+# [= Error Page =]
+@app.route("/error")
+def error():
+    return render_template("error.html")
+
+# Error handling
+@app.errorhandler(404)
+def error404(e):
+    return render_template("error.html")
+@app.errorhandler(405)
+def error405(e):
+    return render_template("error.html")
 
 # [= Application start =]
 
