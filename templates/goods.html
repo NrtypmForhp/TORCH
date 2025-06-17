@@ -4,15 +4,13 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="TORCH system">
-        <title>TORCH - Homepage</title>
+        <title>TORCH - Goods</title>
         <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='pictures/main/torch_icon.ico')}}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="{{url_for('static', filename='main_style.css', version='1.0')}}">
-        <link rel="stylesheet" href="{{url_for('static', filename='home.css', version='1.0')}}">
         <script src="{{url_for('static', filename='main_scripts.js', version='1.0')}}"></script>
-        <script src="{{url_for('static', filename='home.js', version='1.0')}}"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
         </style>
@@ -49,14 +47,6 @@
             </div>
         </div>
 
-        {% if "logged" not in session %}
-            <!-- Login DIV -->
-            <div id="div-login">
-                <input class="main-input" type="text" id="login-username-input" placeholder="{{language[session['language']]['main']['username']}}">
-                <input class="main-input" type="password" id="login-password-input" placeholder="{{language[session['language']]['main']['password']}}">
-            </div>
-        {% endif %}
-
         <!-- [= Header =] -->
         <div class="div-flex">
             <!-- Logo -->
@@ -73,9 +63,7 @@
                 </div>
                 <!-- Login / Logout buttons -->
                 <div class="div-block">
-                    {% if "logged" not in session %}
-                        <button class="main-button-green" id="login-button">{{language[session['language']]['main']['login']}}</button>
-                    {% else %}
+                    {% if "logged" in session %}
                         <button class="main-button-green" id="logout-button">{{language[session['language']]['main']['logout']}}</button>
                     {% endif %}
                 </div>
@@ -84,26 +72,7 @@
 
         <!-- [= Center =] -->
         <div class="div-block">
-            {% if "logged" not in session %}
-                <!-- Not logged message -->
-                <div class="div-block">
-                    <p class="main-text-white">{{language[session['language']]['home']['not-logged-message-head']}}</p>
-                    <p class="main-text-white">{{language[session['language']]['home']['not-logged-message-bottom']}}</p>
-                </div>
-            {% else %}
-                <!-- Logged in -->
-
-                {% if "goods" in session["access"] %}
-                <!-- Goods -->
-                <div class="center-box">
-                    <a class="main-a" target="_blank" rel="noopener noreferrer" href="/goods">
-                        <img alt="Goods" src="{{url_for('static', filename='pictures/home/goods.png')}}">
-                        <h3 class="main-text-green">{{language[session['language']]['home']['goods-box-title']}}</h3>
-                        <p class="main-text-green">{{language[session['language']]['home']['goods-box-description']}}</p>
-                    </a>
-                </div>
-                {% endif %}
-            {% endif %}
+            
         </div>
     </body>
 </html>
