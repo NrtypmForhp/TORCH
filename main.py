@@ -36,6 +36,8 @@ LANGUAGES_DIRECTORY = os.path.join(APP_ROOT_DIRECTORY, "languages") # Languages 
 PICTURES_DIRECTORY = os.path.join(STATIC_DIRECTORY, "pictures") # Pictures main directory inside static directory for better use with jinja2
 # Pictures directories
 MAIN_PICTURES_DIRECTORY = os.path.join(PICTURES_DIRECTORY, "main") # Main pictures directory, contains pictures like logo
+HOME_PICTURES_DIRECTORY = os.path.join(PICTURES_DIRECTORY, "home") # Home pictures directory, contains pictures for homepage
+GOODS_PICTURES_DIRECTORY = os.path.join(PICTURES_DIRECTORY, "goods") # Goods pictures directory, contains pictures for goods page
 
 # [= Create directories if not exists =]
 
@@ -49,6 +51,8 @@ if os.path.exists(LANGUAGES_DIRECTORY) == False: os.mkdir(LANGUAGES_DIRECTORY)
 if os.path.exists(PICTURES_DIRECTORY) == False: os.mkdir(PICTURES_DIRECTORY)
 # Pictures directories
 if os.path.exists(MAIN_PICTURES_DIRECTORY) == False: os.mkdir(MAIN_PICTURES_DIRECTORY)
+if os.path.exists(HOME_PICTURES_DIRECTORY) == False: os.mkdir(HOME_PICTURES_DIRECTORY)
+if os.path.exists(GOODS_PICTURES_DIRECTORY) == False: os.mkdir(GOODS_PICTURES_DIRECTORY)
 
 # [= Main settings =]
 
