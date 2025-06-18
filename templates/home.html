@@ -95,12 +95,10 @@
 
                 {% if "goods" in session["access"] %}
                 <!-- Goods -->
-                <div class="center-box">
-                    <a class="main-a" target="_blank" rel="noopener noreferrer" href="/goods">
-                        <img alt="Goods" src="{{url_for('static', filename='pictures/home/goods.png')}}">
-                        <h3 class="main-text-green">{{language[session['language']]['home']['goods-box-title']}}</h3>
-                        <p class="main-text-green">{{language[session['language']]['home']['goods-box-description']}}</p>
-                    </a>
+                <div class="center-box" id="div-centerbox-goods">
+                    <img alt="Goods" src="{{url_for('static', filename='pictures/home/goods.png')}}">
+                    <h3 class="main-text-green">{{language[session['language']]['home']['goods-box-title']}}</h3>
+                    <p class="main-text-green">{{language[session['language']]['home']['goods-box-description']}}</p>
                 </div>
                 {% endif %}
             {% endif %}
