@@ -26,18 +26,10 @@
 .center-box img{
     width: 185px;
     height: auto;
-    margin: 0;
-    padding: 0;
     border-bottom: 2px solid var(--green-color);
 }
 .center-box h3{
     text-align: center;
-    margin: 0;
-    padding: 0;
-}
-.center-box p{
-    margin: 0;
-    padding: 0;
 }
 .center-box:hover{
     transform: scale(1.02);

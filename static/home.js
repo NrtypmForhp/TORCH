@@ -44,6 +44,13 @@ $(document).ready(function(){
         }
     });
 
+    // [= Center box divs click handling =]
+
+    // Goods
+    $(document).on("click", "#div-centerbox-goods", function(){
+        window.open("/goods", "_blank");
+    });
+
     // [= Enter key on input handling =]
 
     $("#login-username-input, #login-password-input").on("keydown", function(e){ // Login button
