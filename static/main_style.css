@@ -248,11 +248,13 @@ html{
 .div-flex{
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 .div-inline{
     display: inline-block;
     margin-right: 15px;
+    vertical-align: top;
 }
 .div-right{
     margin-left: auto;
@@ -289,6 +291,11 @@ html{
 /* Small screens */
 
 @media screen and (max-width: 1090px){
+    /* [= Div classes =] */
+    .div-inline-fill{
+        flex-basis: 100%;
+        width: 100%;
+    }
     /* Operations in progress */
     #div-operations-in-progress{
         overflow: auto;
@@ -309,6 +316,13 @@ html{
 /* Medium screens */
 
 @media screen and (max-width: 1599px) and (min-width: 1091px){
+    /* [= Div classes =] */
+    .div-inline-fill{
+        display: inline-block;
+        margin-right: 15px;
+        flex: 1 1 auto;
+        vertical-align: top;
+    }
     /* Operations in progress */
     #div-operations-in-progress-contents{
         margin-top: 35px;
@@ -328,6 +342,13 @@ html{
 
 /* Big screens */
 @media screen and (min-width: 1600px){
+    /* [= Div classes =] */
+    .div-inline-fill{
+        display: inline-block;
+        margin-right: 15px;
+        flex: 1 1 auto;
+        vertical-align: top;
+    }
     /* Operations in progress */
     #div-operations-in-progress-contents{
         margin-top: 50px;
