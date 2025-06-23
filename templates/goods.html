@@ -76,7 +76,23 @@
 
         <!-- [= Center =] -->
         <div class="div-block">
-            
+            <!-- Main functions -->
+            <div class="div-block">
+                <button class="main-button-green" id="new_item_button">{{language[session['language']]['goods']['new-item-button']}}</button>
+            </div>
+
+            <!-- Goods table -->
+            <div class="div-block main-table-div">
+                <table class="main-table">
+                    <tbody>
+                        <tr>
+                            <th><h3 class="main-text-green">{{language[session['language']]['goods']['goods-table-code']}}</h3></th>
+                            <th><h3 class="main-text-green">{{language[session['language']]['goods']['goods-table-description']}}</h3></th>
+                            <th><h3 class="main-text-green">{{language[session['language']]['goods']['goods-table-stock']}}</h3></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
