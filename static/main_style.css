@@ -277,6 +277,19 @@ html{
     margin-left: auto;
 }
 
+/* [= Table classes =] */
+.main-table{
+    margin-top: 15px;
+    border: 2px solid var(--green-color);
+    border-collapse: collapse;
+}
+.main-table tr:first-child > *{
+    border-bottom: 2px solid var(--green-color);
+}
+.main-table th, .main-table td{
+    text-align: center;
+}
+
 /* [= Languages flags =] */
 
 #it_language_button{
@@ -295,6 +308,13 @@ html{
     .div-inline-fill{
         flex-basis: 100%;
         width: 100%;
+    }
+    /* [= Table classes =] */
+    .main-table-div{
+        overflow-x: auto;
+    }
+    .main-table{
+        width: 1000px;
     }
     /* Operations in progress */
     #div-operations-in-progress{
@@ -323,6 +343,13 @@ html{
         flex: 1 1 auto;
         vertical-align: top;
     }
+    /* [= Table classes =] */
+    .main-table-div{
+        overflow-x: hidden;
+    }
+    .main-table{
+        width: calc(100% - 25px);
+    }
     /* Operations in progress */
     #div-operations-in-progress-contents{
         margin-top: 35px;
@@ -348,6 +375,14 @@ html{
         margin-right: 15px;
         flex: 1 1 auto;
         vertical-align: top;
+    }
+    /* [= Table classes =] */
+    /* [= Table classes =] */
+    .main-table-div{
+        overflow-x: hidden;
+    }
+    .main-table{
+        width: calc(100% - 25px);
     }
     /* Operations in progress */
     #div-operations-in-progress-contents{
