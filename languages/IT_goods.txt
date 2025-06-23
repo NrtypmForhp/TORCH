@@ -1,1 +1,5 @@
 search-input-placeholder: Cerca negli articoli
+new-item-button: Nuovo articolo
+goods-table-code: Codice
+goods-table-description: Descrizione
+goods-table-stock: Quantità nei magazzini
