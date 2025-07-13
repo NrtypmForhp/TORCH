@@ -1,4 +1,4 @@
-/* TORCH main css file */
+/* [= TORCH main css file =] */
 
 /* [= ROOT =] */
 
@@ -376,7 +376,6 @@ html{
         flex: 1 1 auto;
         vertical-align: top;
     }
-    /* [= Table classes =] */
     /* [= Table classes =] */
     .main-table-div{
         overflow-x: hidden;
