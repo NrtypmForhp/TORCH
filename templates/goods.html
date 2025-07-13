@@ -10,7 +10,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="{{url_for('static', filename='main_style.css', version='1.0')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='goods.css', version='1.0')}}">
         <script src="{{url_for('static', filename='main_scripts.js', version='1.0')}}"></script>
+        <script src="{{url_for('static', filename='goods.js', version='1.0')}}"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
         </style>
@@ -43,6 +45,21 @@
                 <div class="div-flex div-bottombar">
                     <input class="main-input" id="alert-input">
                     <button class="main-button-yellow" id="alert-ok-button">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- New item div -->
+        <div id="div-new-item">
+            <div class="div-block" id="div-new-item-contents">
+                <!-- Top Bar -->
+                <div class="div-flex div-topbar">
+                    <h2 class="main-text-green">{{language[session['language']]['goods']['new-item-button']}}</h2>
+                    <img id="new-item-close" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
+                </div>
+                <!-- Center -->
+                <div class="div-block">
+                    
                 </div>
             </div>
         </div>
