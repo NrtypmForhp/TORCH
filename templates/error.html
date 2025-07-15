@@ -18,8 +18,8 @@
 
     <body>
         <!-- Operations in progress -->
-        <div id="div-operations-in-progress">
-            <div id="div-operations-in-progress-contents">
+        <div id="div-operations-in-progress" class="hidden-div">
+            <div class="hidden-div-contents">
                 <img src="{{url_for('static', filename='pictures/main/operations_in_progress.png')}}">
             </div>
         </div>
@@ -28,12 +28,12 @@
         <div id="div-quick-alert"></div>
 
         <!-- Alert -->
-        <div id="div-alert">
-            <div class="div-block" id="div-alert-contents">
+        <div id="div-alert" class="hidden-div">
+            <div class="hidden-div-contents">
                 <!-- Top Bar -->
                 <div class="div-flex div-topbar">
                     <h2 class="main-text-red" id="alert-title"></h2>
-                    <img id="alert-close" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
+                    <img id="alert-close" class="close-button" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
                 </div>
                 <!-- Text -->
                 <div class="div-block">
