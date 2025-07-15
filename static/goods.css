@@ -2,32 +2,7 @@
 
 /* [= New item div =] */
 #div-new-item{
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--black-op-color);
-    display: none;
     z-index: 11;
-}
-#div-new-item-contents{
-    border: 5px solid var(--green-color);
-    background-color: var(--black-color);
-    padding: 5px;
-    margin: auto;
-}
-#div-new-item-contents h2, #div-new-item-contents p{
-    padding: 10px;
-    margin: 0;
-}
-#div-new-item-contents div{
-    margin-top: 15px;
-}
-#new-item-close{
-    cursor: pointer;
 }
 
 /* [= Screen resolutions =] */
@@ -35,25 +10,16 @@
 /* Small screens */
 
 @media screen and (max-width: 1090px){
-    #div-new-item-contents{
-        margin-top: 25px;
-        width: 90%;
-    }
+    
 }
 
 /* Medium screens */
 
 @media screen and (max-width: 1599px) and (min-width: 1091px){
-    #div-new-item-contents{
-        margin-top: 35px;
-        width: 80%;
-    }
+
 }
 
 /* Big screens */
 @media screen and (min-width: 1600px){
-    #div-new-item-contents{
-        margin-top: 50px;
-        width: 60%;
-    }
+
 }
