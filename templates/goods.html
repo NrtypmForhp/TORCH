@@ -49,17 +49,32 @@
             </div>
         </div>
 
-        <!-- New item div -->
-        <div id="div-new-item" class="hidden-div">
+        <!-- Item div -->
+        <div id="div-item-management" class="hidden-div">
             <div class="hidden-div-contents">
                 <!-- Top Bar -->
                 <div class="div-flex div-topbar">
-                    <h2 class="main-text-green">{{language[session['language']]['goods']['new-item-button']}}</h2>
-                    <img id="new-item-close" class="close-button" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
+                    <h2 class="main-text-green">{{language[session['language']]['goods']['item-management']}}</h2>
+                    <img id="item-management-close" class="close-button" src="{{url_for('static', filename='pictures/main/close_icon.png')}}">
                 </div>
                 <!-- Center -->
                 <div class="div-block">
-                    
+                    <!-- Left inputs -->
+                    <div class="div-inline">
+                        <!-- Category input -->
+                        <input class="main-input" id="item-management-category-input" placeholder="{{language[session['language']]['goods']['category']}}">
+                        <!-- Type input -->
+                        <input class="main-input" id="item-management-type-input" placeholder="{{language[session['language']]['goods']['type']}}">
+                    </div>
+                    <!-- Right item details -->
+                    <div class="div-inline">
+                        <p class="main-text-green">{{language[session['language']]['goods']['item-detail']}}</p>
+                        <p class="main-text-green" id="item-management-details-p"></p>
+                    </div>
+                </div>
+                <!-- Item output -->
+                <div class="div-block">
+                    <h2 class="main-text-green" id="item-code-output-h2">{{language[session['language']]['goods']['item-code-output']}}</h2>
                 </div>
             </div>
         </div>
@@ -87,7 +102,7 @@
             </div>
             <!-- Search input -->
             <div class="div-inline-fill">
-                <input class="search-input" id="goods_search_input" placeholder="{{language[session['language']]['goods']['search-input-placeholder']}}">
+                <input class="search-input" id="goods-search-input" placeholder="{{language[session['language']]['goods']['search-input-placeholder']}}">
             </div>
         </div>
 
@@ -95,7 +110,7 @@
         <div class="div-block">
             <!-- Main functions -->
             <div class="div-block">
-                <button class="main-button-green" id="new_item_button">{{language[session['language']]['goods']['new-item-button']}}</button>
+                <button class="main-button-green" id="new-item-button">{{language[session['language']]['goods']['new-item-button']}}</button>
             </div>
 
             <!-- Goods table -->
