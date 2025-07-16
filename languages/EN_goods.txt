@@ -1,5 +1,10 @@
 search-input-placeholder: Search inside goods
 new-item-button: New item
+item-management: Item management
 goods-table-code: Code
 goods-table-description: Description
 goods-table-stock: Quantities in warehouses
+category: Category
+type: Type
+item-code-output: Item code:
+item-detail: > Item detail <

@@ -1,5 +1,10 @@
 search-input-placeholder: Cerca negli articoli
 new-item-button: Nuovo articolo
+item-management: Gestione articolo
 goods-table-code: Codice
 goods-table-description: Descrizione
 goods-table-stock: Quantità nei magazzini
+category: Categoria
+type: Tipo
+item-code-output: Codice articolo:
+item-detail: > Dettaglio articolo <
